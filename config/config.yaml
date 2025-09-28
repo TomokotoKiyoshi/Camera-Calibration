@@ -1,0 +1,32 @@
+# 相机标定配置文件
+# Camera Calibration Configuration
+
+# 棋盘格参数
+checkerboard:
+  rows: 6          # 内角点行数 (棋盘格黑白格交点的行数-1)
+  cols: 9          # 内角点列数 (棋盘格黑白格交点的列数-1)
+  square_size: 40  # 方格实际尺寸 (单位: mm)
+
+# 图像采集参数
+capture:
+  device_id: 0              # 摄像头ID (0为默认摄像头)
+  target_images: 25         # 目标采集图像数量
+  preview_size: [1280, 720] # 预览窗口分辨率
+  save_format: "png"        # 保存格式 (jpg/png)
+
+# 标定参数
+calibration:
+  model: "fisheye"         # 标定模型: "pinhole" (标准) 或 "fisheye" (鱼眼)
+  max_error: 1.0           # 最大允许重投影误差 (像素)
+  min_images: 20           # 最少需要的图像数量
+  flags: 0                 # OpenCV标定标志位
+  # flags说明:
+  # 0: 默认，标定所有参数
+  # cv2.CALIB_FIX_K3: 固定k3=0
+  # cv2.CALIB_ZERO_TANGENT_DIST: 设置切向畸变p1=p2=0
+  # cv2.CALIB_FIX_ASPECT_RATIO: 固定fx/fy的比例
+
+  # 亚像素优化参数
+  subpix_criteria:
+    max_iter: 30           # 最大迭代次数
+    epsilon: 0.001         # 终止精度
