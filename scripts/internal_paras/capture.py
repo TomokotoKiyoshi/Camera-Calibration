@@ -16,7 +16,7 @@ import time
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 # 默认路径
-DEFAULT_CONFIG_PATH = PROJECT_ROOT / "config" / "config.yaml"
+DEFAULT_CONFIG_PATH = PROJECT_ROOT / "config" / "internal_config.yaml"
 DEFAULT_IMAGE_DIR = PROJECT_ROOT / "calibration_images"
 
 

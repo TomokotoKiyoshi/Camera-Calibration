@@ -32,7 +32,7 @@ class CameraCalibrator:
                 如果为None，使用默认路径 'config/config.yaml'
         """
         if config_path is None:
-            config_path = str(PROJECT_ROOT / "config" / "config.yaml")
+            config_path = str(PROJECT_ROOT / "config" / "internal_config.yaml")
         self.config = self._load_config(config_path)
         self.checkerboard_size = (
             self.config['checkerboard']['cols'],

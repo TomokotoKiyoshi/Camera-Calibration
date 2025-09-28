@@ -190,7 +190,7 @@ def main():
     加载标定结果并打印评估报告
     """
     # 加载配置和标定结果
-    config_path = str(PROJECT_ROOT / "config" / "config.yaml")
+    config_path = str(PROJECT_ROOT / "config" / "internal_config.yaml")
     result_path = str(DEFAULT_CALIBRATION_PATH)
     output_dir = str(DEFAULT_OUTPUT_DIR)
 

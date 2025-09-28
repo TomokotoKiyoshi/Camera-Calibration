@@ -1,0 +1,19 @@
+# 相机外参标定配置
+# Camera External Calibration Configuration
+
+# 手动标定参数
+manual_calibration:
+  # 地砖参数
+  tile_size: [596, 596]    # 单块地砖尺寸 (mm)
+  # 网格大小由用户点击的点数自动确定
+
+  # 世界坐标系定义
+  world_origin: "top_left"  # 原点位置: "top_left", "center"
+  ground_height: 0          # 地面高度 (mm)，通常为0
+
+
+# 3D映射参数
+mapping:
+  grid_spacing: 100         # 网格间距 (mm)
+  max_distance: 10000       # 最大测量距离 (mm)
+  default_height: 0         # 默认物体高度 (mm)
